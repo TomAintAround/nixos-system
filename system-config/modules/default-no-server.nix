@@ -68,7 +68,10 @@
         from = 1714;
         to = 1764;
       };
+      cs2Port = 27015;
     in {
+      allowedTCPPorts = [cs2Port];
+      allowedUDPPorts = [cs2Port];
       allowedTCPPortRanges = [kdeConnectPorts];
       allowedUDPPortRanges = [kdeConnectPorts];
     };
