@@ -29,7 +29,6 @@
     ./music.nix
     ./neovim.nix
     ./scripts.nix
-    ./trash-cli.nix
   ];
 
   nix.gc = {
@@ -200,23 +199,9 @@
       preset = "Default";
     };
 
-    flameshot = {
-      enable = true;
-      settings.General = {
-        drawColor = "#ff0000";
-        showDesktopNotification = false;
-        showStartupLaunchMessage = false;
-      };
-    };
-
     kdeconnect = {
       enable = true;
       indicator = true;
-    };
-
-    udiskie = {
-      enable = true;
-      tray = "auto";
     };
   };
 }

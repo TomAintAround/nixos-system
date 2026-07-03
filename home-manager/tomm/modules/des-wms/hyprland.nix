@@ -21,6 +21,14 @@
     configType = "hyprlang";
 
     settings = {
+      env = [
+        "GDK_BACKEND,wayland,x11,*"
+        "QT_QPA_PLATFORM,wayland;xcb"
+        "SDL_VIDEODRIVER,wayland"
+        "SDL_VIDEO_DRIVER,wayland"
+        "CLUTTER_BACKEND,wayland"
+      ];
+
       monitorv2 = map (m: let
         mode = "${toString m.width}x${toString m.height}@${toString m.refreshRate}";
         position = "${toString m.x}x${toString m.y}";
@@ -353,7 +361,7 @@
         "${pkgs.awww}/bin/awww-daemon"
         "wallpaper-change random"
 
-        # Screensharing
+        # Exporting important variables
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 
         # Polkit
