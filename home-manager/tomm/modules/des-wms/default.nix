@@ -29,6 +29,8 @@
   };
 
   services = {
+    blueman-applet.enable = lib.mkDefault (config.bluetooth.enable && config.wm.enable);
+
     dunst = {
       enable = lib.mkDefault config.wm.enable;
       settings = {
@@ -208,6 +210,9 @@
     checkWayland = "WAYLAND_DISPLAY";
   in {
     services = {
+      blueman-applet = lib.mkIf config.services.blueman-applet.enable {
+        Service.ExecCondition = checkWM;
+      };
       dunst = lib.mkIf config.services.dunst.enable {
         Service = {
           ExecStart = lib.mkForce "${pkgs.dunst}/bin/dunst --config ~/.config/dunst/dunstrc";

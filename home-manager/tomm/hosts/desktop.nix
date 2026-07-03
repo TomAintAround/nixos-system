@@ -46,6 +46,7 @@
     }
   ];
 
+  bluetooth.enable = false;
   brightness.enable = false;
   openrazer.enable = true;
   openrgb.enable = true;

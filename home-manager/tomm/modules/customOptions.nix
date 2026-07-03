@@ -2,6 +2,12 @@
   inherit (lib) mkOption types;
 in {
   options = {
+    bluetooth.enable = mkOption {
+      type = types.bool;
+      description = "Enables bluetooth tray applet";
+      default = false;
+    };
+
     brightness.enable = mkOption {
       type = types.bool;
       description = "Enables monitor brightness control modules";
