@@ -287,6 +287,6 @@ in {
     };
   };
 
-  # FIX: make sure to remove this when the fix is sent to upstream
+  # FIX: for some reason, catppuccin.kvantum.apply isn't working correctly
   qt.kvantum.settings.General.theme = "catppuccin-${flavor}-${accent}";
 }
