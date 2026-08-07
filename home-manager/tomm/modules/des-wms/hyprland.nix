@@ -24,8 +24,8 @@
       env = [
         "GDK_BACKEND,wayland,x11,*"
         "QT_QPA_PLATFORM,wayland;xcb"
-        "SDL_VIDEODRIVER,wayland"
-        "SDL_VIDEO_DRIVER,wayland"
+        "SDL_VIDEODRIVER,wayland,x11"
+        "SDL_VIDEO_DRIVER,wayland,x11"
         "CLUTTER_BACKEND,wayland"
       ];
 
