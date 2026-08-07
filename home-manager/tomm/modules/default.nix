@@ -94,6 +94,7 @@
       exiftool
       eza
       ffmpeg-full
+      file
       gimp
       inputs.helium.packages.${system}.default
       imagemagick
