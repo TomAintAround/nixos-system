@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    hedgemodmanager
     (heroic.override {
       extraPkgs = pkgs: [
         gamemode
