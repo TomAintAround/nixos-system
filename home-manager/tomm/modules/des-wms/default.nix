@@ -238,14 +238,12 @@
         Service.ExecCondition = checkWM;
       };
       trash-cli = {
-        Unit = {
-          Description = "Deletes 14+ day old trash";
-          ExecCondition = checkWM;
-        };
+        Unit.Description = "Deletes 14+ day old trash";
 
         Service = {
           Type = "oneshot";
           ExecStart = "${pkgs.trash-cli}/bin/trash-empty 14";
+          ExecCondition = checkWM;
         };
       };
     };
