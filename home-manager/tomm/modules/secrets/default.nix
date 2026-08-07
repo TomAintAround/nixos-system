@@ -14,9 +14,6 @@
     defaultSopsFormat = "yaml";
     age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
 
-    secrets = {
-      "mpdscribblePassword" = {};
-      "bwSession" = {};
-    };
+    secrets."mpdscribblePassword" = {};
   };
 }
