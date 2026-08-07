@@ -112,6 +112,7 @@
       p7zip
       parallel
       popsicle
+      qbittorrent
       ripdrag # Drag-and-drop for the terminal
       ripgrep # Grep but better
       seahorse # Secrets manager
